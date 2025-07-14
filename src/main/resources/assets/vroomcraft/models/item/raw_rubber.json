@@ -1,0 +1,6 @@
+{
+  "parent": "vroomcraft:item/generated",
+  "textures": {
+    "layer0": "vroomcraft:item/raw_rubber"
+  }
+}

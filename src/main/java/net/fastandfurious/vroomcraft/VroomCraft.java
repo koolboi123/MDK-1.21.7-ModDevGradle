@@ -1,5 +1,6 @@
 package net.fastandfurious.vroomcraft;
 
+import net.fastandfurious.vroomcraft.items.ModItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -60,6 +61,7 @@ public class VroomCraft {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        ModItems.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -71,9 +73,12 @@ public class VroomCraft {
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
+    {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(ModItems.RAW_RUBBER);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
