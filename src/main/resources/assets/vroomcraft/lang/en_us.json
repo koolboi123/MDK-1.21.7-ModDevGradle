@@ -1,10 +1,12 @@
 {
-  "vroomcraft.raw_rubber": "Raw Rubber",
+  "item.vroomcraft.raw_rubber": "Raw Rubber",
+
+
   "vroomcraft.configuration.title": "Example Mod Configs",
   "vroomcraft.configuration.section.vroomcraft.common.toml": "Example Mod Configs",
   "vroomcraft.configuration.section.vroomcraft.common.toml.title": "Example Mod Configs",
   "vroomcraft.configuration.items": "Item List",
   "vroomcraft.configuration.logDirtBlock": "Log Dirt Block",
   "vroomcraft.configuration.magicNumberIntroduction": "Magic Number Text",
-  "vroomcraft.configuration.magicNumber": "Magic Number",
+  "vroomcraft.configuration.magicNumber": "Magic Number"
 }

@@ -1,6 +1,6 @@
 {
   "model": {
-    "type": "vroomcraft:model",
+    "type": "minecraft:model",
     "model": "vroomcraft:item/raw_rubber"
   }
 }
