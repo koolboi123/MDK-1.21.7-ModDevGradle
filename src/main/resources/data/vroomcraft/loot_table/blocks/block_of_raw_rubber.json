@@ -14,5 +14,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/raw_iron_block"
+  "random_sequence": "vroomcraft:blocks/block_of_raw_rubber"
 }

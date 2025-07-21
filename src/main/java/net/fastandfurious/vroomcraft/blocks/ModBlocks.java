@@ -39,6 +39,7 @@ public class ModBlocks
 
     public static final DeferredBlock <Block> ALUMINUM_ORE = registerBlock("aluminum_ore",() -> new Block(BlockBehaviour.Properties.of()
             .sound(SoundType.IRON)
+            .strength(1.79f)
             .requiresCorrectToolForDrops()
             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:aluminum_ore")))));
 
