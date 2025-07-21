@@ -67,6 +67,8 @@ public class VroomCraft {
             event.accept(ModBlocks.BLOCK_OF_RAW_RUBBER);
             event.accept(ModBlocks.ALUMINUM_ORE);
             event.accept(ModBlocks.BLOCK_OF_RUBBER);
+            event.accept(ModItems.RAW_ALUMINUM);
+            event.accept(ModItems.BUCKET_OF_OIL);
         }
     }
 
