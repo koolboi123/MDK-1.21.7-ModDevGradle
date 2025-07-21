@@ -25,4 +25,6 @@ public class ModItems
 
     public static final DeferredItem <Item> RAW_ALUMINUM = ITEMS.register("raw_aluminum",
             ()->new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("vroomcraft:raw_aluminum")))));
+    public static final DeferredItem <Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot",
+            ()->new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("vroomcraft:aluminum_ingot")))));
 }
