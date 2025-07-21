@@ -1,5 +1,6 @@
 package net.fastandfurious.vroomcraft;
 
+import net.fastandfurious.vroomcraft.blocks.JonahBlocks;
 import net.fastandfurious.vroomcraft.blocks.ModBlocks;
 import net.fastandfurious.vroomcraft.items.ModItems;
 import net.minecraft.client.Minecraft;
@@ -82,6 +83,7 @@ public class VroomCraft {
             event.accept(ModItems.RAW_RUBBER);
             event.accept(ModBlocks.BLOCK_OF_RAW_RUBBER);
             event.accept(ModBlocks.ALUMINUM_ORE);
+            event.accept(JonahBlocks.BLOCK_OF_RUBBER);
         }
     }
 
