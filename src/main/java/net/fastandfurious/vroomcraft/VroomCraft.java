@@ -1,5 +1,6 @@
 package net.fastandfurious.vroomcraft;
 
+import net.fastandfurious.vroomcraft.blocks.ModBlocks;
 import net.fastandfurious.vroomcraft.items.ModItems;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -62,6 +63,7 @@ public class VroomCraft {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -78,6 +80,8 @@ public class VroomCraft {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(ModItems.RAW_RUBBER);
+            event.accept(ModBlocks.BLOCK_OF_RAW_RUBBER);
+            event.accept(ModBlocks.ALUMINUM_ORE);
         }
     }
 

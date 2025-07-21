@@ -1,6 +1,9 @@
 {
-  "item.vroomcraft.raw_rubber": "Raw Rubber",
 
+  "item.vroomcraft.block_of_raw_rubber" : "Raw Rubber",
+  "item.vroomcraft.aluminum_ore" : "Aluminum Ore",
+
+  "item.vroomcraft.raw_rubber": "Raw Rubber",
 
   "vroomcraft.configuration.title": "Example Mod Configs",
   "vroomcraft.configuration.section.vroomcraft.common.toml": "Example Mod Configs",

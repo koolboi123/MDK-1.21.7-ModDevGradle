@@ -1,4 +1,46 @@
 package net.fastandfurious.vroomcraft.blocks;
 
-public class ModBlocks {
+import net.fastandfurious.vroomcraft.VroomCraft;
+import net.fastandfurious.vroomcraft.items.ModItems;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
+
+public class ModBlocks
+{
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(VroomCraft.MODID);
+    public static void register(IEventBus bus)
+    {
+        BLOCKS.register(bus);
+    }
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("vroomcraft:"+name)))));
+    }
+
+    public static final DeferredBlock <Block> BLOCK_OF_RAW_RUBBER = registerBlock("block_of_raw_rubber",() -> new Block(BlockBehaviour.Properties.of()
+            .sound(SoundType.SLIME_BLOCK)
+            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:block_of_raw_rubber")))));
+
+    public static final DeferredBlock <Block> ALUMINUM_ORE = registerBlock("aluminum_ore",() -> new Block(BlockBehaviour.Properties.of()
+            .sound(SoundType.IRON)
+            .requiresCorrectToolForDrops()
+            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:aluminum_ore")))));
+
+
 }
