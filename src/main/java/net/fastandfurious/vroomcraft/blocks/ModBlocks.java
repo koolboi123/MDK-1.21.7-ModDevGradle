@@ -48,5 +48,4 @@ public class ModBlocks
             .sound(SoundType.SLIME_BLOCK)
             .requiresCorrectToolForDrops()
             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:block_of_rubber")))));
-
 }
