@@ -42,5 +42,10 @@ public class ModBlocks
             .requiresCorrectToolForDrops()
             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:aluminum_ore")))));
 
+    public static final DeferredBlock<Block> BLOCK_OF_RUBBER = ModBlocks.registerBlock("block_of_rubber",() -> new Block(BlockBehaviour.Properties.of()
+            .strength(0.1f, 100f)
+            .sound(SoundType.SLIME_BLOCK)
+            .requiresCorrectToolForDrops()
+            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:block_of_rubber")))));
 
 }
