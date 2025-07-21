@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "vroomcraft:raw_aluminum",
+  "result": {
+    "id": "vroomcraft:aluminum_ingot"
+  },
+  "experience": 0.15,
+  "cookingtime": 180
+}
