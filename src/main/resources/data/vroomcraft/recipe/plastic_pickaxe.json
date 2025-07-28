@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "#": "vroomcraft:plastic",
+    "/": "minecraft:stick"
+  },
+  "result": {
+    "id": "minecraft:plastic_pickaxe",
+    "count": 1
+  }
+}

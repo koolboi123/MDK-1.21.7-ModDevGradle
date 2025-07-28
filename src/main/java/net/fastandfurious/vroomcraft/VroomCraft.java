@@ -75,6 +75,7 @@ public class VroomCraft {
             event.accept(ModItems.ALUMINUM_BUCKET);
             event.accept(ModItems.PLASTIC_PICKAXE);
             event.accept(ModItems.PLASTIC_WASTE);
+            event.accept(ModItems.PLASTIC);
         }
     }
 
