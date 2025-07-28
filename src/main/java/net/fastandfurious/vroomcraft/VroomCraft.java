@@ -73,6 +73,7 @@ public class VroomCraft {
             event.accept(ModItems.BUCKET_OF_OIL);
             event.accept(ModItems.ALUMINUM_INGOT);
             event.accept(ModItems.ALUMINUM_BUCKET);
+            event.accept(ModItems.PLASTIC_PICKAXE);
         }
     }
 

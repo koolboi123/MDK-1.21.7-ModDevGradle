@@ -28,6 +28,9 @@ public class ModItems
     public static final DeferredItem <Item> BUCKET_OF_OIL = ITEMS.register("bucket_of_oil",
             ()->new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("vroomcraft:bucket_of_oil")))));
 
+    public static final DeferredItem <Item> PLASTIC_PICKAXE = ITEMS.register("plastic_pickaxe",
+            ()->new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("vroomcraft:plastic_pickaxe")))));
+
     public static final DeferredItem<Item> ALUMINUM_BUCKET = ITEMS.register("aluminum_bucket",
             () -> new BucketItem(ModFluids.ALUMINUM_FLUID.get(),
                     new Item.Properties()
