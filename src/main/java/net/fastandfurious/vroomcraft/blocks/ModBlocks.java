@@ -1,6 +1,7 @@
 package net.fastandfurious.vroomcraft.blocks;
 
 import net.fastandfurious.vroomcraft.VroomCraft;
+import net.fastandfurious.vroomcraft.fluid.ModFluids;
 import net.fastandfurious.vroomcraft.items.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -8,8 +9,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -48,4 +52,17 @@ public class ModBlocks
             .sound(SoundType.SLIME_BLOCK)
             .requiresCorrectToolForDrops()
             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:block_of_rubber")))));
+
+    public static final Supplier<LiquidBlock> ALUMINUM_FLUID_BLOCK = BLOCKS.register("aluminum_fluid",
+            () -> new LiquidBlock(ModFluids.ALUMINUM_FLOWING.get(),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.METAL)
+                            .replaceable()
+                            .noCollission()
+                            .strength(100.0F)
+                            .pushReaction(PushReaction.DESTROY)
+                            .noLootTable()
+                            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("vroomcraft:aluminum_fluid")))));
+
+
 }

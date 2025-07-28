@@ -1,6 +1,7 @@
 package net.fastandfurious.vroomcraft;
 
 import net.fastandfurious.vroomcraft.blocks.ModBlocks;
+import net.fastandfurious.vroomcraft.fluid.ModFluids;
 import net.fastandfurious.vroomcraft.items.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -48,6 +49,7 @@ public class VroomCraft {
         modEventBus.addListener(this::addCreative);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -70,6 +72,7 @@ public class VroomCraft {
             event.accept(ModItems.RAW_ALUMINUM);
             event.accept(ModItems.BUCKET_OF_OIL);
             event.accept(ModItems.ALUMINUM_INGOT);
+            event.accept(ModItems.ALUMINUM_BUCKET);
         }
     }
 
