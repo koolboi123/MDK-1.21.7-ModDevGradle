@@ -10,7 +10,7 @@
     "/": "minecraft:stick"
   },
   "result": {
-    "id": "minecraft:plastic_pickaxe",
+    "id": "vroomcraft:plastic_pickaxe",
     "count": 1
   }
 }
